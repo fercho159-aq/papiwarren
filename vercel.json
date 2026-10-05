@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/index.php", "destination": "/", "permanent": true },
+    { "source": "/index.php/nosotros", "destination": "/nosotros", "permanent": true },
+    { "source": "/index.php/nosotros/", "destination": "/nosotros", "permanent": true },
+    { "source": "/index.php/contacto", "destination": "/contacto", "permanent": true },
+    { "source": "/index.php/contacto/", "destination": "/contacto", "permanent": true },
+    { "source": "/nosotros/", "destination": "/nosotros", "permanent": true },
+    { "source": "/contacto/", "destination": "/contacto", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    }
+  ]
+}

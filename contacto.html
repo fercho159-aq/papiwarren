@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Papier Waren</title>
+  <meta name="description" content="Contáctanos o solicita tu factura. Papier Waren, artículos de oficina y papelería.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="contenedor header__fila">
+      <a class="header__logo" href="index.html" aria-label="Papier Waren - Inicio">
+        <img src="assets/img/logo.png" alt="Papier Waren" width="120" height="96">
+      </a>
+      <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="menu" id="menu-principal" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="nosotros.html#sucursales">Sucursales</a></li>
+          <li><a href="https://tienda.papierwaren.com.mx/">Tienda en linea</a></li>
+          <li><a href="contacto.html" class="activo" aria-current="page">Contacto</a></li>
+          <li><a href="contacto.html#facturacion">Facturación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor">
+        <h1 class="titulo-seccion">CONTACTO</h1>
+        <div class="dos-columnas dos-columnas--arriba">
+          <div>
+            <ul class="datos-contacto">
+              <li>Mail: <a href="mailto:pedidos@papierwaren.com.mx">pedidos@papierwaren.com.mx</a></li>
+              <li>Teléfonos: <a href="tel:5580393913">55 8039 3913</a> y <a href="tel:5521910046">55 2191 0046</a></li>
+            </ul>
+            <div class="contacto__logo">
+              <img src="assets/img/logo-grande.png" alt="Logotipo Papier Waren" width="200" height="200" loading="lazy">
+            </div>
+          </div>
+          <div>
+            <form class="formulario" action="/api/enviar" method="post" novalidate>
+              <input type="hidden" name="formulario" value="contacto">
+              <label class="trampa" aria-hidden="true">No llenar <input type="text" name="sitio_web" tabindex="-1" autocomplete="off"></label>
+              <label>Tu nombre
+                <input type="text" name="nombre" required autocomplete="name">
+              </label>
+              <label>Tu correo electrónico
+                <input type="email" name="correo" required autocomplete="email">
+              </label>
+              <label>Mensaje
+                <textarea name="mensaje" rows="4" required></textarea>
+              </label>
+              <button class="boton" type="submit">Enviar</button>
+              <div class="formulario__estado" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--gris" id="facturacion">
+      <div class="contenedor dos-columnas">
+        <div>
+          <form class="formulario" action="/api/enviar" method="post" enctype="multipart/form-data" novalidate>
+            <input type="hidden" name="formulario" value="facturacion">
+            <label class="trampa" aria-hidden="true">No llenar <input type="text" name="sitio_web" tabindex="-1" autocomplete="off"></label>
+            <label>RFC
+              <input type="text" name="rfc" maxlength="13" style="text-transform:uppercase">
+            </label>
+            <label>Razón social
+              <input type="text" name="razon">
+            </label>
+            <label>Tu correo electrónico
+              <input type="email" name="correo" required autocomplete="email">
+            </label>
+            <label>Foto de la nota
+              <input type="file" name="ticket" accept="image/*,.pdf">
+            </label>
+            <button class="boton" type="submit">Enviar</button>
+            <div class="formulario__estado" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+        <div class="facturar">
+          <h2>¿Necesitas Facturar?</h2>
+          <img src="assets/img/facturar.png" alt="Facturación" width="250" height="226" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor footer__fila">
+      <p>Papier Waren <span class="anio"></span> | Todos los derechos Reservados.</p>
+      <div class="redes">
+        <a href="https://www.facebook.com/profile.php?id=100071005633687" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4v3.2h2.8V22h3.3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/papierwaren/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1.1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1.1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0 4.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8zm0 8.1a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/525521910046" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <span class="whatsapp__icono">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.2-3.5-8.5z"/></svg>
+    </span>
+    <span class="whatsapp__texto">WhatsApp</span>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+  <!-- Smartsupp Live Chat (misma cuenta del sitio original) -->
+  <script>
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'c6feaaf7b7c9d8759834ee312946272f7288acd2';
+    window.smartsupp || (function (d) {
+      var s, c, o = smartsupp = function () { o._.push(arguments); }; o._ = [];
+      s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+      c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+      c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+  </script>
+</body>
+</html>

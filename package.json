@@ -1,0 +1,11 @@
+{
+  "name": "papierwaren",
+  "private": true,
+  "description": "Sitio web de Papier Waren (HTML, CSS y JS) con función de Vercel para formularios",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.0"
+  }
+}

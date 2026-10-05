@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Papier Waren | Artículos de oficina, papelería y consumibles</title>
+  <meta name="description" content="PAPIERWAREN, S.A. DE C.V. Comercializadora de artículos para oficina, centro de copiado, consumibles e impresión digital, así como artículos de limpieza.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="contenedor header__fila">
+      <a class="header__logo" href="index.html" aria-label="Papier Waren - Inicio">
+        <img src="assets/img/logo.png" alt="Papier Waren" width="120" height="96">
+      </a>
+      <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="menu" id="menu-principal" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="nosotros.html#sucursales">Sucursales</a></li>
+          <li><a href="https://tienda.papierwaren.com.mx/">Tienda en linea</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="contacto.html#facturacion">Facturación</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Video principal -->
+    <section class="hero" aria-label="Video Papier Waren">
+      <video src="assets/video/hero.mp4" autoplay muted loop playsinline preload="auto"></video>
+    </section>
+
+    <!-- Quiénes somos -->
+    <section class="seccion intro">
+      <div class="contenedor dos-columnas">
+        <div class="intro__logo">
+          <img src="assets/img/logo-grande.png" alt="Logotipo Papier Waren" width="150" height="150" loading="lazy">
+        </div>
+        <div>
+          <p class="intro__texto"><strong>PAPIERWAREN, S.A. DE C.V</strong> Es una Empresa comercializadora de artículos para oficina, centro de copiado, consumibles e impresión digital, así como artículos de limpieza</p>
+          <div class="intro__accion">
+            <a class="boton" href="nosotros.html">Ver más sobre nosotros</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cotización -->
+    <section class="seccion cotizar">
+      <div class="contenedor dos-columnas">
+        <div>
+          <p class="cotizar__titulo">¿Te gustaría cotizar algo en especial?</p>
+          <p class="cotizar__sub">Envíanos tus datos y nuestro ejecutivo de ventas se comunicará contigo</p>
+          <img src="assets/img/cotizar.jpg" alt="Artículos de papelería" width="1024" height="612" loading="lazy">
+        </div>
+        <div>
+          <form class="formulario" action="/api/enviar" method="post" novalidate>
+            <input type="hidden" name="formulario" value="distribuidor">
+            <label class="trampa" aria-hidden="true">No llenar <input type="text" name="sitio_web" tabindex="-1" autocomplete="off"></label>
+            <label>Tu nombre
+              <input type="text" name="nombre" required autocomplete="name">
+            </label>
+            <label>Tu correo electrónico
+              <input type="email" name="correo" required autocomplete="email">
+            </label>
+            <label>WhatsApp
+              <input type="tel" name="whatsapp" required autocomplete="tel">
+            </label>
+            <button class="boton" type="submit">Enviar</button>
+            <div class="formulario__estado" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marcas -->
+    <section class="seccion" aria-label="Marcas">
+      <div class="contenedor">
+        <div class="carrusel">
+          <div class="carrusel__ventana">
+            <div class="carrusel__pista">
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen1.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen2.jpg" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen3.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen4.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen5.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen6.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen7.jpg" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen8.jpg" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen10.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen11.jpg" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen12.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen13.jpg" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen14.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen15.jpg" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen16.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen18.png" alt="Marca" loading="lazy"></div>
+              <div class="carrusel__item"><img src="assets/img/marcas/Imagen19.png" alt="Marca" loading="lazy"></div>
+            </div>
+          </div>
+          <button class="carrusel__flecha carrusel__flecha--prev" type="button" aria-label="Anterior">&#10094;</button>
+          <button class="carrusel__flecha carrusel__flecha--next" type="button" aria-label="Siguiente">&#10095;</button>
+          <div class="carrusel__puntos"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor footer__fila">
+      <p>Papier Waren <span class="anio"></span> | Todos los derechos Reservados.</p>
+      <div class="redes">
+        <a href="https://www.facebook.com/profile.php?id=100071005633687" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4v3.2h2.8V22h3.3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/papierwaren/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1.1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1.1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0 4.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8zm0 8.1a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/525521910046" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <span class="whatsapp__icono">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.2-3.5-8.5z"/></svg>
+    </span>
+    <span class="whatsapp__texto">WhatsApp</span>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+  <!-- Smartsupp Live Chat (misma cuenta del sitio original) -->
+  <script>
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'c6feaaf7b7c9d8759834ee312946272f7288acd2';
+    window.smartsupp || (function (d) {
+      var s, c, o = smartsupp = function () { o._.push(arguments); }; o._ = [];
+      s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+      c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+      c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+  </script>
+</body>
+</html>
